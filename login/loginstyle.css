@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    text-align: center;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
@@ -96,6 +97,7 @@ body{
     background: #6c5ce7;
 }
 
-.register{
+.register_text a{
     color: turquoise;
+    text-decoration: none;
 }
