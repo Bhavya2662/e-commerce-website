@@ -1,8 +1,17 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['username'])) {
+	header("Location: login.php");
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>Online-Shopping Web</title>
+	<title>Fashion Site</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 	<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
@@ -13,8 +22,7 @@
 	<nav>
 		<ul type="none">
 
-			<div class="logo" style="text-align: center;"><img src="images/logoi.png" alt="" width="50px"
-					height="50px">Fashion Site</div>
+			<div class="logo" style="text-align: center;"><img src="images/logoi.png" alt="" width="50px" height="50px">Fashion Site</div>
 			<div class="navi" style=" word-spacing: 25px;">
 
 				<a href="#home" style="color: white; text-decoration: none;">Home</a>

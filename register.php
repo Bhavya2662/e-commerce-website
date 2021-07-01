@@ -53,29 +53,30 @@ if (isset($_POST['submit'])) {
 
     <link rel="stylesheet" type="text/css" href="loginstyle.css">
 
-    <title>Register Form - Pure Coding</title>
+    <title>Register Form</title>
 </head>
 
 <body>
     <div class="container">
-        <form action="" method="POST" class="login-email">
-            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
-            <div class="input-group">
+        <form action="" method="POST" class="loginemail">
+            <p class="login-text" style="font-size: 2rem; font-weight: 800; text-align:center">Register</p>
+            <div class="inputgrp">
                 <input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" required>
             </div>
-            <div class="input-group">
+            <div class="inputgrp">
                 <input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
             </div>
-            <div class="input-group">
+            <div class="inputgrp">
                 <input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
             </div>
-            <div class="input-group">
+            <div class="inputgrp">
                 <input type="password" placeholder="Confirm Password" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
             </div>
-            <div class="input-group">
+            <div class="inputgrp">
                 <button name="submit" class="btn">Register</button>
             </div>
-            <p class="login-register-text">Have an account? <a href="login.php">Login Here</a>.</p>
+            <p class="register-text">Already have an account? <a style="color: turquoise;
+    text-decoration: none;" href="login.php">Login Here</a>.</p>
         </form>
     </div>
 </body>

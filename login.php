@@ -7,7 +7,7 @@ session_start();
 error_reporting(0);
 
 if (isset($_SESSION['username'])) {
-    header("Location: welcome.php");
+    header("Location: index.html");
 }
 
 if (isset($_POST['submit'])) {
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     if ($result->num_rows > 0) {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['username'] = $row['username'];
-        header("Location: welcome.php");
+        header("Location: index.html");
     } else {
         echo "<script>alert('Woops! Email or Password is Wrong.')</script>";
     }
@@ -38,13 +38,13 @@ if (isset($_POST['submit'])) {
 
     <link rel="stylesheet" type="text/css" href="loginstyle.css">
 
-    <title>Login Form - Pure Coding</title>
+    <title>Login Form</title>
 </head>
 
 <body>
     <div class="container">
         <form action="" method="POST" class="loginemail">
-            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Login</p>
+            <p class="login-text" style="font-size: 2rem; font-weight: 800; text-align: center; ">Login</p>
             <div class="inputgrp">
                 <input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
             </div>
@@ -54,7 +54,8 @@ if (isset($_POST['submit'])) {
             <div class="inputgrp">
                 <button name="submit" class="btn">Login</button>
             </div>
-            <p class="register">Don't have an account? <a href="register.php">Register Here</a>.</p>
+            <p class="register-text">Don't have an account? <a style="color: turquoise;
+    text-decoration: none;" href="register.php">Register Here</a>.</p>
         </form>
     </div>
 </body>
