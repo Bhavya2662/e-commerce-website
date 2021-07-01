@@ -19,7 +19,7 @@ if (!isset($_SESSION['username'])) {
 
 <body>
 
-	<nav>
+	<nav style="margin-bottom: 1rem;">
 		<ul type="none">
 
 			<div class="logo" style="text-align: center;"><img src="images/logoi.png" alt="" width="50px" height="50px">Fashion Site</div>
@@ -64,7 +64,7 @@ if (!isset($_SESSION['username'])) {
 
 
 		<div class="right">
-			<h1>Best Festival Offers</h1>
+			<h1 style="margin-top: 100px;">Best Festival Offers</h1>
 			<p>
 				We are providing best quality materials. We have best quality clothes, shoes, sandals for man and
 				womens.
@@ -195,6 +195,7 @@ if (!isset($_SESSION['username'])) {
 			</div>
 		</div>
 	</section>
+	<a href="logout.php">logout</a>
 
 
 
