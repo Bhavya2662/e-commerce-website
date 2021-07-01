@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['username'] = $row['username'];
         header("Location: index.php");
     } else {
-        echo "<script>alert('Woops! Email or Password is Wrong.')</script>";
+        echo "<script>alert('Email or Password is Wrong.')</script>";
     }
 }
 
