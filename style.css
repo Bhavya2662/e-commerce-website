@@ -407,7 +407,7 @@ input[type=text], select, textarea {
   }
   
   /* Style the container/contact section */
-  .container {
+  .contain {
 	border-radius: 5px;
 	background-color: #f2f2f2;
 	padding: 10px;
@@ -436,6 +436,8 @@ input[type=text], select, textarea {
 	}
   }
 
-
+.checked {
+	color: orange;
+  }
 
 

@@ -19,7 +19,19 @@ if (!isset($_SESSION['username'])) {
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
 
-
+	<script>
+		$(document).ready(function() {
+			$(".testimonial-carousel").slick({
+				infinite: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: false,
+				arrows: true,
+				prevArrow: $(".testimonial-carousel-controls .prev"),
+				nextArrow: $(".testimonial-carousel-controls .next")
+			});
+		});
+	</script>
 
 </head>
 
@@ -439,7 +451,7 @@ if (!isset($_SESSION['username'])) {
 		</div>
 
 	</div>
-	<div id="men" style="background-image: url(images/kid.jpg);background-position: center;
+	<div id="kids" style="background-image: url(images/kid.jpg);background-position: center;
   background-repeat: no-repeat;
   background-size: cover;">
 		<h2 style=" color:white; text-align: center; margin-top:2rem; margin-bottom:2rem; font-size:100px">Kids</h2>
@@ -519,6 +531,100 @@ if (!isset($_SESSION['username'])) {
 
 
 	</div>
+	<h2 style=" margin-top:2rem; margin-bottom:2rem; text-align: center;">Testimonials</h2>
+	<div style="max-width: 950px; display: block;
+    margin-left: auto;
+    margin-right: auto ">
+		<div class="row">
+			<div class="col-md-4" style="padding: 0 0.5rem">
+				<div class="card d-flex mx-auto" style="border-radius: 1rem;
+    box-shadow: 0px -10px 0px rgb(151, 248, 6);margin: 1rem 0.7rem 1rem;
+        max-width: 80vw;">
+					<div class="card-image"> <img style="width: 6.2rem;
+    border-radius: 5rem;
+    margin: 1.3rem auto 1rem auto" class="img-fluid d-flex mx-auto" src="https://i.imgur.com/3TlwnLF.jpg"> </div>
+					<div class="card-text">
+						<div class="card-title">Lorem Ipsum!</div> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus Duis leo. Donec sodales sagittis magna
+					</div>
+					<div style="display: inline;">
+						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+					</div>
+
+					<div class="footer" style="border-top: none;
+    text-align: center;
+    line-height: 1.2rem;
+    padding: 2rem 0 1.4rem 0;
+    font-family: 'Varela Round'"> <span id="name" style="font-size: 0.8rem;
+    font-weight: bold">Micheal Smith<br></span> <span id="position" style="color: rgb(151, 248, 6);
+    font-weight: bold">CEO of <a href="#">Google.com</a></span> </div>
+				</div>
+			</div>
+			<div class="col-md-4" style="padding: 0 0.5rem">
+				<div class="card d-flex mx-auto" style="border-radius: 1rem;
+    box-shadow: 0px -10px 0px rgb(151, 248, 6);margin: 1rem 0.7rem 1rem;
+        max-width: 80vw;">
+					<div class="card-image"> <img style="width: 6.2rem;
+    border-radius: 5rem;
+    margin: 1.3rem auto 1rem auto" class="img-fluid d-flex mx-auto" src="https://i.imgur.com/Uz4FjGZ.jpg"> </div>
+					<div class="card-text">
+						<div class="card-title">Lorem Ipsum!</div> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus Duis leo. Donec sodales sagittis magna
+					</div>
+					<div style="display: inline;">
+						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+					</div>
+
+					<div class="footer" style="border-top: none;
+    text-align: center;
+    line-height: 1.2rem;
+    padding: 2rem 0 1.4rem 0;
+    font-family: 'Varela Round'"> <span id="name" style="font-size: 0.8rem;
+    font-weight: bold">Angellia Miller<br></span> <span id="position" style="color: rgb(151, 248, 6);
+    font-weight: bold">CEO of <a href="#">Facebook.com</a></span> </div>
+				</div>
+			</div>
+			<div class="col-md-4" style="padding: 0 0.5rem">
+				<div class="card d-flex mx-auto " style="border-radius: 1rem;
+    box-shadow: 0px -10px 0px rgb(151, 248, 6);margin: 1rem 0.7rem 1rem;
+        max-width: 80vw;">
+					<div class="card-image"> <img style="width: 6.2rem;
+    border-radius: 5rem;
+    margin: 1.3rem auto 1rem auto" class="img-fluid d-flex mx-auto" src="https://i.imgur.com/udGH5tO.jpg"> </div>
+					<div class="card-text">
+						<div class="card-title">Lorem Ipsum!</div> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus Duis leo. Donec sodales sagittis magna
+					</div>
+					<div style="display:inline">
+						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+					</div>
+
+					<div class="footer" style="border-top: none;
+    text-align: center;
+    line-height: 1.2rem;
+    padding: 2rem 0 1.4rem 0;
+    font-family: 'Varela Round'"> <span id="name" style="font-size: 0.8rem;
+    font-weight: bold">Christina Williams<br></span> <span id="position" style="color: rgb(151, 248, 6);
+    font-weight: bold">UX Designer at <a href="#">Youtube.com</a></span> </div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="contain" style="
   border-radius: 5px;
@@ -543,7 +649,7 @@ if (!isset($_SESSION['username'])) {
 					<input type="text" id="lname" name="lastname" placeholder="Your last name..">
 					<label for="country">Country</label>
 					<select id="country" name="country">
-						<option value="australia">Australia</option>
+						<option value="india">India</option>
 						<option value="canada">Canada</option>
 						<option value="usa">USA</option>
 					</select>
