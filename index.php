@@ -20,6 +20,7 @@ if (!isset($_SESSION['username'])) {
 	<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
 
 
+
 </head>
 
 <body>
@@ -123,7 +124,7 @@ if (!isset($_SESSION['username'])) {
 
 	<section id="featured">
 
-		<h2>Featured</h2>
+		<h2 style="text-align: center; margin-top:2rem; margin-bottom:2rem; font-size:100px">Featured</h2>
 
 		<div class="wrapper">
 			<div class="box1">
@@ -158,51 +159,19 @@ if (!isset($_SESSION['username'])) {
 				<img src="images/ds.jpg" height="400px">
 				<div class="price">Price: $50</div>
 			</div>
-			<div>
-				<img src="images/s4.jpg" height="400px">
-				<div class="price">Price: $50</div>
-			</div>
-			<div>
-				<img src="images/s1.png" height="400px">
-				<div class="price">Price: $50</div>
-			</div>
-			<div>
-				<img src="images/i3.jpg" height="400px">
-				<div class="price">Price: $50</div>
-			</div>
-			<div>
-				<img src="images/mfa.jpg" height="400px">
-				<div class="price">Price: $50</div>
-			</div>
+
 		</div>
 
 	</section>
 
-
-	<section id="men" style="text-align: center;">
-		<h2>Men</h2>
+	<div id="men" style="background-image: url(images/men.jpg);background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
+		<h2 style="text-align: center; margin-top:2rem; margin-bottom:2rem; font-size:100px">Men</h2>
 
 		<div class="man-row">
-			<section id="Topwear" style="text-align: left; color: black">
-				<h3>Topwear</h3>
-				<div class="men-topwear">
-					<div class="man-box">
-						<img src="images/images.jpg">
-						<h2>Nike Ferr TR<br>$129.99</h2>
-						<h3>Add to cart </h3>
-					</div>
-					<div class="man-box">
-						<img src="images/sh3.webp">
-						<h2>Nike Ferr TR<br>$129.99</h2>
-						<h3>Add to cart </h3>
-					</div>
-					<div class="man-box">
-						<img src="images/s2.jpg">
-						<h2>Nike Ferr TR<br>$129.99</h2>
-						<h3>Add to cart </h3>
-					</div>
-				</div>
-			</section>
+			<h2 style="font-size: 50px; color:white">Topwear</h2>
+
 			<div class="man-box">
 				<img src="images/s2.jpg">
 				<h2>Nike Ferr TR<br>$129.99</h2>
@@ -214,27 +183,124 @@ if (!isset($_SESSION['username'])) {
 				<h3>Add to cart </h3>
 			</div>
 			<div class="man-box">
-				<img src="images/s5.jpg">
+				<img src="images/s5.jpg" width="50px" height="200px">
 				<h2>Nike Ferr TR<br>$129.99</h2>
 				<h3>Add to cart </h3>
 			</div>
 			<div class="man-box">
 				<img src="images/s2.jpg">
-				<h2>Nike Ferr TR<br>$129.99</h2>
-				<h3>Add to cart </h3>
-			</div>
-			<div class="man-box">
-				<img src="images/s5.jpg">
 				<h2>Nike Ferr TR<br>$129.99</h2>
 				<h3>Add to cart </h3>
 			</div>
 		</div>
-	</section>
+		<div class="man-row">
+			<h2 style="font-size: 50px; color:white">Bottomwear</h2>
+
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s5.jpg" width="50px" height="200px">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+		</div>
+		<div class="man-row">
+			<h2 style="font-size: 50px; color:white">Footwear</h2>
+
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s5.jpg" width="50px" height="200px">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+		</div>
+		<div class="man-row">
+
+			<h2 style="font-size: 50px; color:white">Festivewear</h2>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s5.jpg" width="50px" height="200px">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+		</div>
+		<div class="man-row">
+			<h2 style="font-size: 50px; color:white">Accessories</h2>
+
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s5.jpg" width="50px" height="200px">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+		</div>
+
+	</div>
 
 
-	<section id="women">
+	<div id="women" style="background-image: url(images/women.jpg);background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
+
+		<h2 style="text-align: center; margin-top:2rem; margin-bottom:2rem; font-size:100px">Women</h2>
 
 		<div class="man-row">
+			<h2 style="font-size: 50px; color:white">Topwear</h2>
 			<div class="man-box">
 				<img src="images/s1.png">
 				<h2>Nike Ferr TR<br>$129.99</h2>
@@ -256,25 +322,236 @@ if (!isset($_SESSION['username'])) {
 				<h3>Add to cart </h3>
 			</div>
 		</div>
-	</section>
-	<div class="mapouter">
-		<div class="gmap_canvas"><iframe width="1080" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=alwar&t=k&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br>
-			<style>
-				.mapouter {
-					position: relative;
-					text-align: right;
-					height: 500px;
-					width: 1080px;
-				}
-			</style><a href="https://www.embedgooglemap.net">embed google map in webpage</a>
-			<style>
-				.gmap_canvas {
-					overflow: hidden;
-					background: none !important;
-					height: 500px;
-					width: 1080px;
-				}
-			</style>
+		<div class="man-row">
+			<h2 style="font-size: 50px; color:white">Bottomwear</h2>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+		</div>
+		<div class="man-row">
+			<h2 style="font-size: 50px; color:white">Sarees</h2>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+		</div>
+		<div class="man-row">
+			<h2 style="font-size: 50px; color:white">Kurtis</h2>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+		</div>
+		<div class="man-row">
+			<h2 style="font-size: 50px; color:white">Footwear</h2>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+		</div>
+		<div class="man-row">
+			<h2 style="font-size: 50px; color:white">Cosmetics</h2>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s1.png">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+		</div>
+
+	</div>
+	<div id="men" style="background-image: url(images/kid.jpg);background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
+		<h2 style=" color:white; text-align: center; margin-top:2rem; margin-bottom:2rem; font-size:100px">Kids</h2>
+
+		<div class="man-row">
+			<h2 style="font-size: 50px; color:white">Topwear</h2>
+
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s5.jpg" width="50px" height="200px">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+		</div>
+		<div class="man-row">
+			<h2 style="font-size: 50px; color:white">Bottomwear</h2>
+
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s5.jpg" width="50px" height="200px">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+		</div>
+		<div class="man-row">
+			<h2 style="font-size: 50px; color:white">Footwear</h2>
+
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s5.jpg" width="50px" height="200px">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+			<div class="man-box">
+				<img src="images/s2.jpg">
+				<h2>Nike Ferr TR<br>$129.99</h2>
+				<h3>Add to cart </h3>
+			</div>
+		</div>
+
+
+	</div>
+
+	<div class="contain" style="
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;">
+		<div style="text-align:center">
+			<h2>Contact Us</h2>
+			<p>Leave us a message:</p>
+		</div>
+		<div class="row">
+			<div class="column" style="float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;">
+				<img src="images/logoi.png" style="width:100%">
+			</div>
+			<div class="column">
+				<form action="/action_page.php">
+					<label for="fname">First Name</label>
+					<input type="text" id="fname" name="firstname" placeholder="Your name..">
+					<label for="lname">Last Name</label>
+					<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+					<label for="country">Country</label>
+					<select id="country" name="country">
+						<option value="australia">Australia</option>
+						<option value="canada">Canada</option>
+						<option value="usa">USA</option>
+					</select>
+					<label for="subject">Subject</label>
+					<textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
 		</div>
 	</div>
 </body>
