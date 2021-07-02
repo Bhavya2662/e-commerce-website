@@ -37,6 +37,7 @@ nav{
 	background: rgb(15, 224, 33);
 	color: rgb(132, 134, 128);
 }
+
 .container{
 	display: flex;
 	justify-content: center;

@@ -63,7 +63,8 @@ if (!isset($_SESSION['username'])) {
 				</div>
 			</div>
 		</section>
-		<nav class="navbar navbar-expand-md navbar-main border-bottom" style="height: 2rem; background-color: #007bff;">
+		<nav class="navbar navbar-expand-md navbar-main border-bottom" style="height: 2rem; background-color: #007bff;  padding-left: auto;
+    padding-right: auto;">
 			<div class="container-fluid">
 				<form class="d-md-none my-2">
 					<div class="input-group"> <input type="search" name="search" class="form-control" placeholder="Search" required="">
@@ -71,7 +72,7 @@ if (!isset($_SESSION['username'])) {
 					</div>
 				</form> <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#dropdown6" aria-expanded="false"> <span class="navbar-toggler-icon"></span> </button>
 				<div id="dropdown6">
-					<ul class="navbar-nav mr-auto" style="text-indent: 5rem; ">
+					<ul class="navbar-nav mr-auto" style="text-indent: 5rem;">
 						<a href="#home" style="color: white; text-decoration: none;">Home</a>
 						<a href="#featured" style="color: white; text-decoration: none;">Featured</a>
 						<div class="dropdown">
@@ -114,7 +115,8 @@ if (!isset($_SESSION['username'])) {
 	</header>
 
 
-	<div class="container">
+	<div style="display: flex;
+	align-items: center; background-image:url(images/p2.jpg)">
 		<div class="left">
 			<img src="images/slider.jpg" style="border-radius: 20px;">
 		</div>
