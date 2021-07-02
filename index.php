@@ -29,7 +29,7 @@ if (!isset($_SESSION['username'])) {
 			<div class="container-fluid">
 				<div class="row align-items-center">
 					<div class="col-lg-3 col-sm-4 col-md-4 col-5"> <a href="#" class="brand-wrap" data-abc="true">
-							<div class="logo" style="text-align: center;"><img src="images/logoi.png" alt="" width="50px" height="50px">Fashion Site</div>
+							<div class="logo" style="text-align: center; color:black; font-size:30px"><img src="images/logoi.png" alt="" width="50px" height="50px">Fashion Site</div>
 
 						</a> </div>
 					<div class="col-lg-4 col-xl-5 col-sm-8 col-md-4 d-none d-md-block">
@@ -43,36 +43,7 @@ if (!isset($_SESSION['username'])) {
 						<div class="d-flex justify-content-end"> <a href="cart.php">
 
 								<img src="images/scart.png" alt="" width="40px" height="40px" id="img"></a> <span class="vl"></span>
-							<!-- <div class="dropdown btn-group"> <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-abc="true"><i class="fas fa fa-bell"></i></a>
-									<ul class="dropdown-menu dropdown-menu-right notification-dropdown">
-										<li>
-											<div class="notification-title">More Info</div>
-											<div class="notification-list">
-												<div class="list-group"> <a href="affiliates" class="list-group-item list-group-item-action active" data-abc="true">
-														<div class="notification-info">
-															<div class="notification-list-user-img"><img src="https://img.icons8.com/nolan/100/000000/helping-hand.png" alt="" class="user-avatar-md rounded-circle"></div>
-															<div class="notification-list-user-block"><span class="notification-list-user-name">Affiliate program</span> </div>
-														</div>
-													</a> <a href="redemption-center" class="list-group-item list-group-item-action active" data-abc="true">
-														<div class="notification-info">
-															<div class="notification-list-user-img"><img src="https://img.icons8.com/bubbles/100/000000/prize.png" alt="" class="user-avatar-md rounded-circle"></div>
-															<div class="notification-list-user-block"><span class="notification-list-user-name">Redemption Center</span> </div>
-														</div>
-													</a> <a href="#" class="list-group-item list-group-item-action active" data-abc="true">
-														<div class="notification-info">
-															<div class="notification-list-user-img"><img src="https://img.icons8.com/ultraviolet/100/000000/medal.png" alt="" class="user-avatar-md rounded-circle"></div>
-															<div class="notification-list-user-block"><span class="notification-list-user-name">Achievements</span> </div>
-														</div>
-													</a> <a href="#" class="list-group-item list-group-item-action active" data-abc="true">
-														<div class="notification-info">
-															<div class="notification-list-user-img"><img src="https://img.icons8.com/bubbles/100/000000/call-female.png" alt="" class="user-avatar-md rounded-circle"></div>
-															<div class="notification-list-user-block"><span class="notification-list-user-name">Contact us</span> </div>
-														</div>
-													</a> </div>
-											</div>
-										</li>
-									</ul> -->
-							<!-- </div>  -->
+
 							<span class="vl"></span> <a class="nav-link nav-user-img" href="logout.php" data-toggle="modal" data-target="#login-modal" data-abc="true"><span class="login">LOGOUT</span></a>
 						</div>
 					</div>
@@ -86,104 +57,48 @@ if (!isset($_SESSION['username'])) {
 						<div class="input-group-append"> <button type="submit" class="btn btn-secondary"> <i class="fa fa-search"></i> </button> </div>
 					</div>
 				</form> <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#dropdown6" aria-expanded="false"> <span class="navbar-toggler-icon"></span> </button>
-				<div class="navbar-collapse collapse" id="dropdown6">
+				<div id="dropdown6">
 					<ul class="navbar-nav mr-auto" style="text-indent: 5rem; ">
 						<a href="#home" style="color: white; text-decoration: none;">Home</a>
 						<a href="#featured" style="color: white; text-decoration: none;">Featured</a>
 						<div class="dropdown">
-							<a href="#man" style="color: white; text-decoration: none;">Man</a>
+							<a href="#men" style="color: white; text-decoration: none;">Men</a>
 							<div class="dropdown-content">
-								<a href="#">a</a>
-								<a href="#">b</a>
-								<a href="#">c</a>
+								<a href="#">Topwear</a>
+								<a href="#">Bottomwear</a>
+								<a href="#">Footwear</a>
+								<a href="#">Festivewear</a>
+								<a href="#">Accessories</a>
 							</div>
 						</div>
-						<div class="dropdown">
-							<a href="#women" style="color: white; text-decoration: none;">Women</a>
-							<div class="dropdown-content">
-								<a href="#">a</a>
-								<a href="#">b</a>
-								<a href="#">c</a>
+						</td>
+						<td style="padding-left: 1rem; padding-right: 1rem;">
+							<div class="dropdown">
+								<a href="#women" style="color: white; text-decoration: none;">Women</a>
+								<div class="dropdown-content">
+									<a href="#">Topwear</a>
+									<a href="#">Bottomwear</a>
+									<a href="#">Saree</a>
+									<a href="#">Kurtis</a>
+									<a href="#">Footwear</a>
+									<a href="#">Cosmetics</a>
+								</div>
 							</div>
-						</div>
-						<div class="dropdown">
-							<a href="#kids" style="color: white; text-decoration: none;">Kids</a>
-							<div class="dropdown-content">
-								<a href="#">a</a>
-								<a href="#">b</a>
-								<a href="#">c</a>
+						</td>
+						<td style="padding-left: 1rem; padding-right: 1rem;">
+							<div class="dropdown">
+								<a href="#kids" style="color: white; text-decoration: none;">Kids</a>
+								<div class="dropdown-content">
+									<a href="#">Topwear</a>
+									<a href="#">Bottomwear</a>
+									<a href="#">Footwear</a>
+								</div>
 							</div>
-						</div>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
-	<!-- <div>
-			<div>
-				<div></div>
-				<div>
-					<div>
-						<div>
-							<img src="images/logoi.png" alt="" width="50px" height="50px">Fashion Site
-						</div>
-					</div>
-					<div>
-						<form action="search.php" method="GET">
-							<div>
-								<div>
-									<input type="text" title="Search for Products, brands and more" name="" id="">
-								</div>
-								<button type="submit">
-									<svg width="20" height="20" viewBox="0 0 17 18" class="" xmlns="http://www.w3.org/2000/svg">
-										<g fill="#2874F1" fill-rule="evenodd">
-											<path class="_34RNph" d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path>
-											<path class="_34RNph" d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path>
-										</g>
-									</svg></button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-	<!-- <nav style="margin-bottom: 1rem;">
-		<ul type="none">
-
-			<div class="logo" style="text-align: center;"><img src="images/logoi.png" alt="" width="50px" height="50px">Fashion Site</div>
-			<div class="navi" style=" word-spacing: 25px;">
-
-				<a href="#home" style="color: white; text-decoration: none;">Home</a>
-				<a href="#featured" style="color: white; text-decoration: none;">Featured</a>
-				<div class="dropdown">
-					<a href="#man" style="color: white; text-decoration: none;">Man</a>
-					<div class="dropdown-content">
-						<a href="#">a</a>
-						<a href="#">b</a>
-						<a href="#">c</a>
-					</div>
-				</div>
-				<div class="dropdown">
-					<a href="#women" style="color: white; text-decoration: none;">Women</a>
-					<div class="dropdown-content">
-						<a href="#">a</a>
-						<a href="#">b</a>
-						<a href="#">c</a>
-					</div>
-				</div>
-				<div class="dropdown">
-					<a href="#kids" style="color: white; text-decoration: none;">Kids</a>
-					<div class="dropdown-content">
-						<a href="#">a</a>
-						<a href="#">b</a>
-						<a href="#">c</a>
-					</div>
-				</div>
-			</div>
-		</ul>
-
-	</nav> -->
 
 
 	<div class="container">
