@@ -18,6 +18,8 @@ if (!isset($_SESSION['username'])) {
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -38,7 +40,9 @@ if (!isset($_SESSION['username'])) {
 						</form>
 					</div>
 					<div class="col-lg-5 col-xl-4 col-sm-8 col-md-4 col-7">
-						<div class="d-flex justify-content-end"> <img src="images/scart.png" alt="" width="40px" height="40px"> <span class="vl"></span>
+						<div class="d-flex justify-content-end"> <a href="cart.php">
+
+								<img src="images/scart.png" alt="" width="40px" height="40px" id="img"></a> <span class="vl"></span>
 							<!-- <div class="dropdown btn-group"> <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-abc="true"><i class="fas fa fa-bell"></i></a>
 									<ul class="dropdown-menu dropdown-menu-right notification-dropdown">
 										<li>
