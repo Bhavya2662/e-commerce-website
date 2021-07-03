@@ -7,6 +7,7 @@ if (!isset($_SESSION['username'])) {
 }
 
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -19,19 +20,7 @@ if (!isset($_SESSION['username'])) {
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
 
-	<script>
-		$(document).ready(function() {
-			$(".testimonial-carousel").slick({
-				infinite: true,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				autoplay: false,
-				arrows: true,
-				prevArrow: $(".testimonial-carousel-controls .prev"),
-				nextArrow: $(".testimonial-carousel-controls .next")
-			});
-		});
-	</script>
+
 
 </head>
 
