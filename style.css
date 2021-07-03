@@ -330,38 +330,7 @@ button{
     border-radius: 0.37rem
 }
 
-/* .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    float: left;
-    min-width: 10rem;
-    padding: .5rem 0;
-    margin: .5rem 7px 0px;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .15);
-    border-radius: .25rem
-}
 
-.dropdown-item {
-    display: block;
-    width: 100%;
-    padding: .45rem 1.5rem;
-    clear: both;
-    font-weight: 400;
-    color: #212529;
-    text-align: inherit;
-    white-space: nowrap;
-    background-color: transparent;
-    border: 0
-} */
 
 .navbar-toggler-icon {
     background-image: url(https://img.icons8.com/ios/50/000000/menu.png)
@@ -407,29 +376,22 @@ input[type=text], select, textarea {
 	background-color: #45a049;
   }
   
-  /* Style the container/contact section */
   .contain {
 	border-radius: 5px;
 	background-color: #f2f2f2;
 	padding: 10px;
   }
-  
-  /* Create two columns that float next to eachother */
   .column {
 	float: left;
 	width: 50%;
 	margin-top: 6px;
 	padding: 20px;
   }
-  
-  /* Clear floats after the columns */
   .row:after {
 	content: "";
 	display: table;
 	clear: both;
   }
-  
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
 	.column, input[type=submit] {
 	  width: 100%;
