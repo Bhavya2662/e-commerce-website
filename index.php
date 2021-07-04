@@ -7,6 +7,44 @@ if (!isset($_SESSION['username'])) {
 }
 
 ?>
+<?php
+
+include('db.php');
+$status = "";
+if (isset($_POST['code']) && $_POST['code'] != "") {
+	$code = $_POST['code'];
+	$result = mysqli_query($con, "SELECT * FROM `products` WHERE `code`='$code'");
+	$row = mysqli_fetch_assoc($result);
+	$name = $row['name'];
+	$code = $row['code'];
+	$price = $row['price'];
+	$image = $row['image'];
+
+	$cartArray = array(
+		$code => array(
+			'name' => $name,
+			'code' => $code,
+			'price' => $price,
+			'quantity' => 1,
+			'image' => $image
+		)
+	);
+
+	if (empty($_SESSION["shopping_cart"])) {
+		$_SESSION["shopping_cart"] = $cartArray;
+		$status = "<div class='box'>Product is added to your cart!</div>";
+	} else {
+		$array_keys = array_keys($_SESSION["shopping_cart"]);
+		if (in_array($code, $array_keys)) {
+			$status = "<div class='box' style='color:red;'>
+		Product is already added to your cart!</div>";
+		} else {
+			$_SESSION["shopping_cart"] = array_merge($_SESSION["shopping_cart"], $cartArray);
+			$status = "<div class='box'>Product is added to your cart!</div>";
+		}
+	}
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -20,7 +58,11 @@ if (!isset($_SESSION['username'])) {
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
 
-
+	<style>
+		.box {
+			font-size: 20px;
+		}
+	</style>
 
 </head>
 
@@ -42,11 +84,13 @@ if (!isset($_SESSION['username'])) {
 						</form>
 					</div>
 					<div class="col-lg-5 col-xl-4 col-sm-8 col-md-4 col-7">
-						<div class="d-flex justify-content-end"> <a href="cart.php">
+						<div class="d-flex justify-content-end">
 
-								<img src="images/scart.png" alt="" width="40px" height="40px" id="img"></a> <span class="vl"></span>
 
-							<span class="vl"></span> <a class="nav-link nav-user-img" href="logout.php" data-toggle="modal" data-target="#login-modal" data-abc="true"><span class="login">LOGOUT</span></a>
+							<a href="cart.php">
+								<img src="images/scart.png" alt="" width="40px" height="40px" id="img" />
+
+							</a><a class="nav-link nav-user-img" href="logout.php" data-toggle="modal" data-target="#login-modal" data-abc="true"><span class="login">LOGOUT</span></a>
 						</div>
 					</div>
 				</div>
@@ -125,47 +169,41 @@ if (!isset($_SESSION['username'])) {
 		</div>
 	</div>
 
-	<section id="featured">
-
+	<div style="background-image: url(images/p1.jpg);">
 		<h2 style="text-align: center; margin-top:2rem; margin-bottom:2rem; font-size:100px">Featured</h2>
 
-		<div class="wrapper">
-			<div class="box1">
-				<img src="images/ss2.webp" height="400px">
-				<div class="price">Price: $100</div>
-			</div>
-			<div>
-				<img src="images/ss1.jpg" height="400px">
-				<div class="price">Price: $50</div>
-			</div>
-			<div>
-				<img src="images/w12.jpg" height="400px">
-				<div class="price">Price: $50</div>
-			</div>
-			<div>
-				<img src="images/ss3.webp" height="400px">
-				<div class="price">Price: $50</div>
-			</div>
-			<div>
-				<img src="images/model_5.jpg" height="400px">
-				<div class="price">Price: $50</div>
-			</div>
-			<div>
-				<img src="images/ss4.webp" height="400px">
-				<div class="price">Price: $50</div>
-			</div>
-			<div>
-				<img src="images/d3.jpg" height="400px">
-				<div class="price">Price: $50</div>
-			</div>
-			<div>
-				<img src="images/ds.jpg" height="400px">
-				<div class="price">Price: $50</div>
+		<div style="width:100%;">
+
+
+
+			<?php
+
+
+			$result = mysqli_query($con, "SELECT * FROM `products`");
+			while ($row = mysqli_fetch_assoc($result)) {
+				echo "<div class='product_wrapper' style='float:left;
+	padding: 10px; margin-left:50px;
+	text-align: center; font-size:40px; font-weight:bold;'>
+			  <form method='post' action=''>
+			  <input type='hidden' name='code' value=" . $row['code'] . " />
+			  <div class='image'><img width='400px' height='450px' src='" . $row['image'] . "' /></div>
+			  <div class='name'>" . $row['name']  . "</div>
+			  <button type='submit' class='buy'>Buy Now</button>
+			  </form>
+		   	  </div>";
+			}
+			mysqli_close($con);
+			?>
+
+			<div style="clear:both;"></div>
+
+			<div class="message_box" style="margin:10px 0px;">
+				<?php echo $status; ?>
 			</div>
 
 		</div>
+	</div>
 
-	</section>
 
 	<div id="men" style="background-image: url(images/men.jpg);background-position: center;
   background-repeat: no-repeat;
@@ -535,7 +573,7 @@ if (!isset($_SESSION['username'])) {
     border-radius: 5rem;
     margin: 1.3rem auto 1rem auto" class="img-fluid d-flex mx-auto" src="https://i.imgur.com/3TlwnLF.jpg"> </div>
 					<div class="card-text">
-						<div class="card-title">Lorem Ipsum!</div> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus Duis leo. Donec sodales sagittis magna
+						<div class="card-title">Rakesh Sharma</div> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus Duis leo. Donec sodales sagittis magna
 					</div>
 					<div style="display: inline;">
 						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -564,7 +602,7 @@ if (!isset($_SESSION['username'])) {
     border-radius: 5rem;
     margin: 1.3rem auto 1rem auto" class="img-fluid d-flex mx-auto" src="https://i.imgur.com/Uz4FjGZ.jpg"> </div>
 					<div class="card-text">
-						<div class="card-title">Lorem Ipsum!</div> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus Duis leo. Donec sodales sagittis magna
+						<div class="card-title">Jiya Yadav</div> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus Duis leo. Donec sodales sagittis magna
 					</div>
 					<div style="display: inline;">
 						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -591,9 +629,9 @@ if (!isset($_SESSION['username'])) {
         max-width: 80vw;">
 					<div class="card-image"> <img style="width: 6.2rem;
     border-radius: 5rem;
-    margin: 1.3rem auto 1rem auto" class="img-fluid d-flex mx-auto" src="https://i.imgur.com/udGH5tO.jpg"> </div>
+    margin: 1.3rem auto 1rem auto" class="img-fluid d-flex mx-auto" src="images/Ragini.jpg"> </div>
 					<div class="card-text">
-						<div class="card-title">Lorem Ipsum!</div> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus Duis leo. Donec sodales sagittis magna
+						<div class="card-title">Ragini Pandey</div> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus Duis leo. Donec sodales sagittis magna
 					</div>
 					<div style="display:inline">
 						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -616,6 +654,7 @@ if (!isset($_SESSION['username'])) {
 			</div>
 		</div>
 	</div>
+
 
 	<div class="contain" style="
   border-radius: 5px;

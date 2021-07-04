@@ -96,9 +96,9 @@ button{
 	font-size: 30px;
 	text-align: center;
 	background-image: url(images/p1.jpg);
+	
 
 }
-
 
 .wrapper{
 	display: grid;
