@@ -660,33 +660,43 @@ if (isset($_POST['code']) && $_POST['code'] != "") {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 10px;">
-		<div style="text-align:center">
-			<h2>Contact Us</h2>
-			<p>Leave us a message:</p>
-		</div>
 		<div class="row">
-			<div class="column" style="float: left;
-  width: 50%;
-  margin-top: 6px;
-  padding: 20px;">
-				<img src="images/logoi.png" style="width:100%">
-			</div>
-			<div class="column">
-				<form action="/action_page.php">
-					<label for="fname">First Name</label>
-					<input type="text" id="fname" name="firstname" placeholder="Your name..">
-					<label for="lname">Last Name</label>
-					<input type="text" id="lname" name="lastname" placeholder="Your last name..">
-					<label for="country">Country</label>
-					<select id="country" name="country">
-						<option value="india">India</option>
-						<option value="canada">Canada</option>
-						<option value="usa">USA</option>
-					</select>
-					<label for="subject">Subject</label>
-					<textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-					<input type="submit" value="Submit">
-				</form>
+
+			<div class="container">
+				<style>
+					.row a {
+						text-decoration: none;
+						color: blue;
+					}
+				</style>
+				<div class="row">
+					<img src="images/logoi.png" width="200px" height="200px">
+					<div class="col-sm-6 col-md-3 item">
+						<h3>Services</h3>
+						<ul type="none">
+							<li><a href="#">Online Shopping</a></li>
+							<li><a href="#">Fashion</a></li>
+							<li><a href="#">Cosmatics</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6 col-md-3 item">
+						<h3>About</h3>
+						<ul type="none">
+							<li><a href="#">fashionsite@admin.com</a></li>
+							<li><a href="#">Team</a></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 item text">
+						<h3>Fashion Site</h3>
+						<p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+
+						<div class="col item social" style="text-indent: 2rem; font-size:30px;"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-snapchat"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+					</div>
+
+				</div>
+				<p class="copyright">Fashion Site © 2021</p>
+
 			</div>
 		</div>
 	</div>
